@@ -16,7 +16,9 @@ class Route(BaseModel):
     route_name:str
     duration:str
     time_schedules:List[str]
-    is_deleted:bool
+    model_config = {
+        "from_attributes": True  
+    }
     
 class Routes(BaseModel):
     data:List[Route]

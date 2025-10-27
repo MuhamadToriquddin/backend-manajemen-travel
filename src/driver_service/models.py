@@ -12,12 +12,13 @@ class RequestUpdateDriver(BaseModel):
     address:str | None
     
 class Driver(BaseModel):
-    id = int
-    driver_name = str
-    phone = str
-    address= str | None
-    trip_completed=int
-    is_deleted = bool
+    id : int
+    driver_name : str
+    phone : str
+    address: str | None
+    model_config = {
+        "from_attributes": True  
+    }
     
 class Drivers(BaseModel):
     data:List[Driver]
