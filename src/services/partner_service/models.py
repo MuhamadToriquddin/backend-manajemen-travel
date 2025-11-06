@@ -11,6 +11,10 @@ class RequestUpdatePartner(BaseModel):
     phone:str
     address:str | None
     
+class RequestUpdateFeePartner(BaseModel):
+    partner_id:int
+    fee:int
+    
 class Partner(BaseModel):
     id : int
     partner_name : str

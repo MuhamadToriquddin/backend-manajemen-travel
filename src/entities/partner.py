@@ -8,6 +8,5 @@ class Partner(Base):
     partner_name = Column(String,unique=True, nullable=False)
     phone = Column(String,nullable=False)
     address=Column(String,nullable=True,default="-")
-    billable_fee = Column(Integer,nullable=False,default=0)
-    collected_fee = Column(Integer,nullable=False,default=0)
+    fee = Column(Integer,nullable=False,default=0)
     is_deleted = Column(Boolean,nullable=False,default=False)
